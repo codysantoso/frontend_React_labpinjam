@@ -166,11 +166,11 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 space-y-6">
+      <main className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 pt-4 pb-24 md:py-8 w-full flex-1 space-y-5 sm:space-y-6">
 
         {/* Alert Notification */}
         {alert && (
-          <div className={`p-4 rounded-2xl flex items-center justify-between text-xs font-semibold shadow-sm transition-all animate-in fade-in ${
+          <div className={`p-3.5 sm:p-4 rounded-xl sm:rounded-2xl flex items-center justify-between text-xs font-semibold shadow-sm transition-all animate-in fade-in ${
             alert.type === 'error'
               ? 'bg-rose-50 text-rose-800 border border-rose-200'
               : 'bg-emerald-50 text-emerald-800 border border-emerald-200'
@@ -188,23 +188,22 @@ export default function App() {
         )}
 
         {/* Hero Banner */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 text-white shadow-xl relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
-              <Sparkles className="w-3.5 h-3.5" />
-              Terhubung ke RESTful API Laravel (v1)
+        <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 text-white shadow-xl relative overflow-hidden">
+          <div className="relative z-10 max-w-2xl space-y-2.5 sm:space-y-3">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] sm:text-xs font-semibold border border-emerald-500/30">
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              RESTful API v1
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight">
               Sistem Peminjaman & Inventaris Lab
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Frontend React modern yang terintegrasi dengan backend Laravel Sanctum. 
-              Mendukung transaksi pengurangan stok atomik, proteksi peran (Admin & Mahasiswa), serta data real-time.
+              Katalog inventaris & peminjaman alat laboratorium kampus dengan token autentikasi Sanctum dan mutasi stok otomatis.
             </p>
           </div>
           
           <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none translate-x-8 translate-y-8">
-            <Microscope className="w-72 h-72 text-white" />
+            <Microscope className="w-48 h-48 sm:w-72 sm:h-72 text-white" />
           </div>
         </div>
 
